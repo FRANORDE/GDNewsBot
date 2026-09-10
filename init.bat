@@ -11,19 +11,19 @@ if not exist .env (
 )
 
 echo Creating needed files, please wait.
-python "GD News Bot (DashWord).py"
+python "GD News Bot (DashWord).py" >nul
 if errorlevel 1 goto :error
 TIMEOUT /t 1 /nobreak >nul
 cls
 
 echo Creating needed files, please wait..
-python "GD Reddit Bot.py"
+python "GD Reddit Bot.py" >nul
 if errorlevel 1 goto :error
 TIMEOUT /t 1 /nobreak >nul
 cls
 
 echo Creating needed files, please wait...
-python "GD News Bot (Pointercrate).py"
+python "GD News Bot (Pointercrate).py" >nul
 if errorlevel 1 goto :error
 TIMEOUT /t 1 /nobreak >nul
 cls
@@ -54,7 +54,7 @@ set /p select=Insert 1 for attempting autofix or 2 for manual fixing, then press
 if "%select%"=="1" goto :autofix
 if "%select%"=="2" goto :manual
 echo Invalid input.
-TIMEOUT /t 1
+TIMEOUT /t 1 >nul
 goto :exit
 
 :autofix
