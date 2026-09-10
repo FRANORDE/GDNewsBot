@@ -12,6 +12,7 @@
 GDNewsBot is a set of open-source Discord webhook bots.
 
 # Usage
+
 GDNewsBot is used in Discord servers for receiving Geometry Dash news and community content from Pointercrate, Dashword, and the r/GeometryDash subreddit.
 It can be run via the `init.bat` file.
 
@@ -21,3 +22,8 @@ It can be run via the `init.bat` file.
 - **GD Reddit Bot** — posts new subreddit threads via Reddit's free RSS feed, with optional flair filtering (e.g. only "Discussion" posts, skipping memes and other fluff).
 - **GD News Bot (Pointercrate)** — tracks the official Demon List and posts when a level enters the top 100 or changes position, complete with a video thumbnail.
 
+# Customization
+
+- Custom Role and Member pinging
+- Custom Weebhooks
+- Flair Filtering for GD Reddit Bot [BETA]
