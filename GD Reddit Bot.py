@@ -29,6 +29,11 @@ import feedparser
 import requests
 from dotenv import load_dotenv
 
+# Windows consoles often default to a legacy encoding (cp1252) that can't
+# print emoji or many special characters found in post titles — this
+# forces UTF-8 so print() never crashes on them.
+sys.stdout.reconfigure(encoding="utf-8")
+
 load_dotenv(Path(__file__).parent / ".env")
 
 # ---- CONFIGURATION ----
@@ -49,11 +54,16 @@ PING_MESSAGE = os.environ.get("REDDIT_PING_MESSAGE", "")
 # Reddit's feed mixes news, memes, questions, showcases, etc. If you only
 # want posts with certain flairs (e.g. "News", "Discussion"), list them
 # here in lowercase. Leave empty to post everything.
-ALLOWED_FLAIRS = []
+ALLOWED_FLAIRS = ["discussion"]
 
 
 def fetch_latest_posts():
-    """Download the subreddit's RSS feed and return its entries, newest first."""
+    """Download the subreddit's RSS feed and return ALL its entries, newest first.
+
+    Flair filtering (ALLOWED_FLAIRS) is applied later in main(), not here —
+    keeping it separate means an empty result here always means "the feed
+    itself is empty or unreachable", never "the filter matched nothing".
+    """
     resp = requests.get(REDDIT_FEED_URL, headers={"User-Agent": USER_AGENT}, timeout=15)
     resp.raise_for_status()
 
@@ -71,9 +81,6 @@ def fetch_latest_posts():
         if entry.get("tags"):
             flair = entry.tags[0].get("term", "").lower()
 
-        if ALLOWED_FLAIRS and (flair not in ALLOWED_FLAIRS):
-            continue
-
         # entry.summary contains an HTML snippet, sometimes with a thumbnail
         thumbnail = None
         if entry.get("media_thumbnail"):
@@ -89,8 +96,7 @@ def fetch_latest_posts():
             }
         )
 
-    # The feed is already newest-first, but we reverse-then-reverse
-    # nothing here since Reddit already guarantees that order.
+    # The feed is already newest-first.
     return posts
 
 
@@ -157,6 +163,8 @@ def main():
         print(f"First run: saving {len(posts)} posts as already seen.")
     else:
         for post in new_posts:
+            if ALLOWED_FLAIRS and (post["flair"] not in ALLOWED_FLAIRS):
+                continue
             print(f"New post: {post['title']}")
             post_to_discord(post)
 
