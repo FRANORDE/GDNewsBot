@@ -39,6 +39,7 @@ TIMEOUT /t 1 >nul
 cls
 echo Closing...
 TIMEOUT /t 1 >nul
+del "lib.txt"
 del "%~f0"
 exit /b 0
 
@@ -48,12 +49,12 @@ echo Something went wrong while running the last bot ΓÇö see the error above.
 echo init.bat was NOT deleted, so you can fix the issue and run it again.
 echo.
 set "select="
-set /p select=Insert 1 for attempting autofix or 2 for closing, then press enter:
+set /p select=Insert 1 for attempting autofix or 2 for manual fixing, then press enter:
 
 if "%select%"=="1" goto :autofix
 if "%select%"=="2" goto :manual
 echo Invalid input.
-goto :manual
+goto :exit
 
 :autofix
 echo Installing required libraries
@@ -69,6 +70,18 @@ echo Opening fix folder...
 TIMEOUT /t 1 /nobreak
 start "" D:\Discord\Webhooks\GD News\fix
 TIMEOUT /t 1 /nobreak
+cls
+echo Closing.
+TIMEOUT /t 1 >nul
+cls
+echo Closing..
+TIMEOUT /t 1 >nul
+cls
+echo Closing...
+TIMEOUT /t 1 >nul
+exit /b 1
+
+:exit
 cls
 echo Closing.
 TIMEOUT /t 1 >nul
