@@ -9,6 +9,8 @@
   <img src="https://img.shields.io/github/issues/FRANORDE/GDNewsBot" alt="Issues">
 </p>
 
-GDNewsBot is a set of open-source Discord webhook bots that pull Geometry Dash news and community content from Pointercrate, Dashword, and the r/GeometryDash subreddit.
+GDNewsBot is a set of open-source Discord webhook bots.
 
 # Usage
+GDNewsBot are used in Discord servers for reciving Geometry Dash news and community content from Pointercrate, Dashword, and the r/GeometryDash subreddit.
+It can be runned via the init.bat file
