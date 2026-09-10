@@ -45,7 +45,7 @@ exit /b 0
 
 :error
 echo.
-echo Something went wrong while running the last bot ΓÇö see the error above.
+echo Something went wrong while running the last bot - see the error above.
 echo init.bat was NOT deleted, so you can fix the issue and run it again.
 echo.
 set "select="
@@ -54,6 +54,7 @@ set /p select=Insert 1 for attempting autofix or 2 for manual fixing, then press
 if "%select%"=="1" goto :autofix
 if "%select%"=="2" goto :manual
 echo Invalid input.
+TIMEOUT /t 1
 goto :exit
 
 :autofix
@@ -68,7 +69,7 @@ exit /b 1
 cls
 echo Opening fix folder...
 TIMEOUT /t 1 /nobreak
-start "" D:\Discord\Webhooks\GD News\fix
+start "" fix
 TIMEOUT /t 1 /nobreak
 cls
 echo Closing.
