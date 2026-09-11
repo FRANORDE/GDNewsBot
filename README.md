@@ -27,3 +27,5 @@ It can be run via the `init.bat` file.
 - Custom Role and Member pinging
 - Custom Webhooks
 - Flair Filtering for GD Reddit Bot [BETA]
+
+# Setup
