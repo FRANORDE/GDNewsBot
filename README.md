@@ -37,7 +37,7 @@ It can be run via the `init.bat` file.
 
 ## Step 1
 
-Clone the repo using the options below
+Clone the repo using the options below:
 
 ### Using Git
 
@@ -49,3 +49,7 @@ cd GDNewsBot
 ### Using GitHub
 
 Click on the Code button, then download as ZIP
+
+## Step 2
+
+Copy the `env.example` content, create a new file, name it `.env` and paste the content copied in `env.example`. Fill in your credentials.
