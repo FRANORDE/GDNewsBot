@@ -35,7 +35,7 @@ It can be run via the `init.bat` file.
 
 # Setup
 
-# Step 1
+## Step 1
 
 Clone the repo using the options below
 
