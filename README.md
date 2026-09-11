@@ -106,3 +106,4 @@ More Customization coming soon (maybe :]).
 - Reddit doesn't allow to make many requests too fast
 - Could cause lag spikes at the selected time (trying to fix)
 - Works only on Windows (Support for Linux wayland in development :])
+- Logo made in 5 mins ;]
