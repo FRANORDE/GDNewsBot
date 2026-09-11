@@ -53,3 +53,21 @@ Click on the Code button, then download as ZIP
 ## Step 2
 
 Copy the `env.example` content, create a new file, name it `.env` and paste the content copied in `env.example`. Fill in your credentials.
+
+To get a webhook URL: open your Discord server, go to the channel you want the bot to post in → **Channel Settings → Integrations → Webhooks → New Webhook** → copy the URL it gives you.
+
+```env
+DASHWORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
+DASHWORD_PING_MESSAGE=@everyone
+
+REDDIT_WEBHOOK_URL=https://discord.com/api/webhooks/...
+REDDIT_PING_MESSAGE=
+REDDIT_USER_AGENT=GDNewsBot/1.0 (by /u/your-reddit-username)
+
+POINTERCRATE_WEBHOOK_URL=https://discord.com/api/webhooks/...
+POINTERCRATE_PING_MESSAGE=
+```
+
+You don't need to fill in every bot — only set up the webhooks for the sources you actually want to use. Leave a `_PING_MESSAGE` empty if you don't want that bot to ping anyone.
+
+> **Never commit your real `.env` file** — it contains secrets. It's already listed in `.gitignore`, so a normal `git add .` won't pick it up.
