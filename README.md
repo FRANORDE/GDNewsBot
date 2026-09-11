@@ -92,9 +92,10 @@ If a bot fails to start, `init.bat` will stop and show you the error instead of 
 
 To check if the GDNewsBot task was actually added, **Open the start menu → search for "Task" press enter to open the Task Scheduler → click on Library and look if a task appears with the name "GDNewsBot" →** if it appears, congratulations, you finished the setup correctly!
 
-## Scheduling
+## Customization
 
 You may use `config.txt` to control when and how often the bots run. Instructions are in the file.
+More Customization coming soon (maybe :) ).
 
 ## Notes
 
