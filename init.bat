@@ -28,6 +28,50 @@ if errorlevel 1 goto :error
 TIMEOUT /t 1 /nobreak >nul
 cls
 
+echo Setting up automatic scheduling, please wait.
+set "START_TIME=15:00"
+set "REPEAT=true"
+set "REPEAT_INTERVAL=15"
+if exist config.txt (
+    for /f "usebackq eol=# tokens=1,2 delims==" %%A in ("config.txt") do (
+        if /I "%%A"=="START_TIME" set "START_TIME=%%B"
+        if /I "%%A"=="REPEAT" set "REPEAT=%%B"
+        if /I "%%A"=="REPEAT_INTERVAL" set "REPEAT_INTERVAL=%%B"
+    )
+)
+
+if exist read.bat del read.bat
+echo @echo off> read.bat
+echo cd /d "%%~dp0">> read.bat
+echo python "GD News Bot (DashWord).py">> read.bat
+echo python "GD Reddit Bot.py">> read.bat
+echo python "GD News Bot (Pointercrate).py">> read.bat
+
+if /I "%REPEAT%"=="true" (
+    schtasks /create /tn "GDNewsBot" /tr "\"%~dp0read.bat\"" /sc daily /st %START_TIME% /ri %REPEAT_INTERVAL% /du 9999:59 /f >nul
+) else (
+    schtasks /create /tn "GDNewsBot" /tr "\"%~dp0read.bat\"" /sc daily /st %START_TIME% /f >nul
+)
+if errorlevel 1 (
+    cls
+    echo.
+    echo WARNING: could not create the scheduled task automatically.
+    echo read.bat was created, but you'll need to schedule it yourself in Task Scheduler
+    echo ^(action: run read.bat, trigger: daily at 15:00, repeat every 15 minutes, indefinitely^).
+    echo.
+    pause
+) else (
+    cls
+    echo Scheduled task "GDNewsBot" created successfully.
+    if /I "%REPEAT%"=="true" (
+        echo read.bat will run automatically every %REPEAT_INTERVAL% minutes, starting at %START_TIME% today.
+    ) else (
+        echo read.bat will run automatically once a day, at %START_TIME%.
+    )
+    TIMEOUT /t 3 /nobreak >nul
+)
+
+cls
 echo Done, wait.
 TIMEOUT /t 1 /nobreak >nul
 cls
@@ -40,6 +84,7 @@ cls
 echo Closing...
 TIMEOUT /t 1 >nul
 del "lib.txt"
+del "env.example"
 del "%~f0"
 exit /b 0
 
