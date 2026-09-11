@@ -71,4 +71,4 @@ POINTERCRATE_PING_MESSAGE=
 
 You don't need to fill in every bot — only set up the webhooks for the sources you actually want to use. Leave a `_PING_MESSAGE` empty if you don't want that bot to ping anyone.
 
-> **Never commit your real `.env` file** — it contains secrets. It's already listed in `.gitignore`, so a normal `git add .` won't pick it up.
+> **Never commit your real `.env` file** — it contains secrets. It's already listed in `.gitignore`, so a normal `git add ` won't pick it up.
