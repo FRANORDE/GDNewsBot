@@ -85,3 +85,9 @@ If a bot fails to start, `init.bat` will stop and show you the error instead of 
 > python "GD Reddit Bot.py"
 > python "GD News Bot (Pointercrate).py"
 > ```
+
+# Finishing
+
+## Checks (optional)
+
+To check if the GDNewsBot task was actually added, **Open the start menu → search for "Task" press enter to open the Task Scheduler → click on Library and look if a task appears with the name "GDNewsBot" →** if it appears, congrarulations, you finished the setup correctly!
