@@ -34,3 +34,18 @@ It can be run via the `init.bat` file.
 
 
 # Setup
+
+# Step 1
+
+Clone the repo using the options below
+
+### Using Git
+
+```bash
+git clone https://github.com/FRANORDE/GDNewsBot.git
+cd GDNewsBot
+```
+
+### Using Github
+
+Click on the Code button, then download as ZIP
