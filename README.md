@@ -55,7 +55,7 @@ Click on the Code button, then download as ZIP
 Copy the `env.example` content, create a new file, name it `.env` and paste the content copied in `env.example`. Fill in your credentials.
 
 To get a webhook URL: open your Discord server, go to the channel you want the bot to post in → **Channel Settings → Integrations → Webhooks → New Webhook** → Create the Webhook and click on copy Webhook URL.
-To use ping messages: go to `discord.com` and select continue in browser. Go to your user settings, scroll to "Developer" and select the toggle "Developer Mode". Then go to your server role, right click and select copy role ID. Make sure to include <@&> before the ID to indicate it as a role.
+To use ping messages: go to `discord.com` and select continue in browser. Go to your user settings, scroll to "Developer" and select the toggle "Developer Mode". Then go to your server role, right click and select copy role ID. Wrap the copied ID like this: <@&ID>, replacing ID with the number you copied.e.
 
 ```env
 DASHWORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
@@ -71,7 +71,7 @@ POINTERCRATE_PING_MESSAGE=
 
 You don't need to fill in every bot — only set up the webhooks for the sources you actually want to use. Leave a `_PING_MESSAGE` empty if you don't want that bot to ping anyone.
 
-> **Never commit your real `.env` file** — it contains secrets. It's already listed in `.gitignore`, so a normal `git add ` won't pick it up.
+> **Never commit your real `.env` file** — it contains secrets. It's already listed in `.gitignore`, so a normal `git add .` won't pick it up.
 
 ## Step 3
 
