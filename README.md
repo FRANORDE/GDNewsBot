@@ -96,7 +96,7 @@ To check if the GDNewsBot task was actually added, **Open the start menu → sea
 ## Customization
 
 You may use `config.txt` to control when and how often the bots run. Instructions are in the file.
-More Customization coming soon (maybe :]).
+More Customization coming soon (maybe :] ).
 
 ## Notes
 
