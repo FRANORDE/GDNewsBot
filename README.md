@@ -21,9 +21,6 @@ It can be run via the `init.bat` file.
 - **GD News Bot (DashWord)** — posts new articles of Dashword.net with title, description, and image, sorted by real publish date (not by page order, which isn't always reliable).
 - **GD Reddit Bot** — posts new subreddit threads via Reddit's free RSS feed, with optional flair filtering (e.g. only "Discussion" posts, skipping memes and other fluff).
 - **GD News Bot (Pointercrate)** — tracks the official Demon List and posts when a level enters the top 100 or changes position, complete with a video thumbnail.
-
-## Customization
-
 - Custom Role and Member pinging
 - Custom Webhooks
 - Flair Filtering for GD Reddit Bot [BETA]
