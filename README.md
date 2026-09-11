@@ -55,7 +55,7 @@ Click on the Code button, then download as ZIP
 Copy the `env.example` content, create a new file, name it `.env` and paste the content copied in `env.example`. Fill in your credentials.
 
 To get a webhook URL: open your Discord server, go to the channel you want the bot to post in → **Channel Settings → Integrations → Webhooks → New Webhook** → Create the Webhook and click on copy Webhook URL.
-To use ping messages: go to `discord.com` and select continue in browser. Go to your user settings, scroll to "Developer" and select the toggle "Developer Mode". Then go to your server role, right click and select copy role ID. Wrap the copied ID like this: <@&ID>, replacing ID with the number you copied.e.
+To use ping messages: go to `discord.com` and select continue in browser. Go to your user settings, scroll to "Developer" and select the toggle "Developer Mode". Then go to your server role, right click and select copy role ID. Wrap the copied ID like this: <@&ID>, replacing ID with the number you copied.
 
 ```env
 DASHWORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
@@ -90,14 +90,13 @@ If a bot fails to start, `init.bat` will stop and show you the error instead of 
 
 ## Checks (optional)
 
-To check if the GDNewsBot task was actually added, **Open the start menu → search for "Task" press enter to open the Task Scheduler → click on Library and look if a task appears with the name "GDNewsBot" →** if it appears, congrarulations, you finished the setup correctly!
+To check if the GDNewsBot task was actually added, **Open the start menu → search for "Task" press enter to open the Task Scheduler → click on Library and look if a task appears with the name "GDNewsBot" →** if it appears, congratulations, you finished the setup correctly!
 
-## Customization
+## Scheduling
 
-You may use the `config.txt` for configuration. Instructions in file.
+You may use `config.txt` to control when and how often the bots run. Instructions are in the file.
 
 ## Notes
 
 - If the PC is turned off at the time the task will run, the bot will not work.
 - This project is still in BETA, expect bugs
-
