@@ -1,0 +1,14 @@
+# Time of day (24-hour format, HH:MM) when read.bat starts running via
+# Task Scheduler.
+# Example: 15:00 means it starts at 3:00 PM.
+START_TIME=15:00
+
+# Whether to keep checking for news throughout the day after START_TIME.
+# true  = repeats every REPEAT_INTERVAL minutes, all day, every day (recommended)
+# false = runs only once per day, at START_TIME
+REPEAT=true
+
+# How often to repeat, in minutes. Only used if REPEAT=true.
+# Lower = checks for news more often, but makes more requests to
+# Dashword/Reddit/Pointercrate.
+REPEAT_INTERVAL=15

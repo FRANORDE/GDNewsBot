@@ -1,0 +1,18 @@
+// This is the DashWord news bot's tracking list — it stores which articles have already been posted to Discord.
+// Please don't edit or delete this file: doing so may cause old articles to be reposted, or new ones to be skipped.
+[
+  "https://www.dashword.net/posts/all-geometry-dash-event-levels/",
+  "https://www.dashword.net/posts/doggie-dies-at-97-on-grief-top-1-hardest-demon-in-geometry-dash/",
+  "https://www.dashword.net/posts/geode-released-for-geometry-dash-2-208-how-to-download-and-install/",
+  "https://www.dashword.net/posts/geometry-dash-2-208-released/",
+  "https://www.dashword.net/posts/geometry-dash-2-21-release-date-might-be-this-november/",
+  "https://www.dashword.net/posts/geometry-dash-hack-exposes-controversial-conduct-within-mod-team/",
+  "https://www.dashword.net/posts/geometry-dash-player-totalgd-becomes-third-person-to-beat-unnerfed-sakupen-circles/",
+  "https://www.dashword.net/posts/geometry-dash-space-gauntlet-contest-all-winners-results/",
+  "https://www.dashword.net/posts/geometry-dash-youtuber-vortrox-gets-33-100-run-on-cycles-x/",
+  "https://www.dashword.net/posts/good-kid-hosts-their-first-geometry-dash-creator-contest/",
+  "https://www.dashword.net/posts/is-geometry-dash-too-hard-how-the-communitys-obsession-with-hardest-ruins-our-perception-of-difficulty/",
+  "https://www.dashword.net/posts/skeletal-extremigans-faces-heavy-backlash-for-selling-skeletal-plushies-without-permission/",
+  "https://www.dashword.net/posts/viprin-resigns-from-geometry-dash-after-12-years/",
+  "https://www.dashword.net/posts/zoink-first-victor-of-flamewall-top-3-hardest-geometry-dash-level/"
+]
