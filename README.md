@@ -49,7 +49,7 @@ cd GDNewsBot
 
 ### Using GitHub
 
-Click on the Code button, then download as ZIP
+Download the release, then unzip it and delete the zipped folder
 
 ## Step 2
 
