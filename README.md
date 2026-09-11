@@ -24,6 +24,10 @@ It can be run via the `init.bat` file.
 
 ### Customization
 
+<h1>
+  <img src="assets/carbon.png" width="90" valign="middle" alt="GDNewsBot logo">
+</h1>
+
 - Custom Role and Member pinging
 - Custom Webhooks
 - Flair Filtering for GD Reddit Bot [BETA]
