@@ -46,6 +46,6 @@ git clone https://github.com/FRANORDE/GDNewsBot.git
 cd GDNewsBot
 ```
 
-### Using Github
+### Using GitHub
 
 Click on the Code button, then download as ZIP
