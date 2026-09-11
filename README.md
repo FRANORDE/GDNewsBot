@@ -103,3 +103,5 @@ More Customization coming soon (maybe :) ).
 - If the PC is turned off at the time the task will run, the bot will not work.
 - This project is still in BETA, expect bugs
 - AI was used to fix bugs
+- Reddit doesn't allow to make many requests too fast
+- Could cause lag spikes at the selected time (trying to fix)
