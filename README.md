@@ -27,6 +27,7 @@ It can be run via the `init.bat` file.
 - Custom Role and Member pinging
 - Custom Webhooks
 - Flair Filtering for GD Reddit Bot [BETA]
+- Custom Task Time
 
 <h1>
   <img src="assets/carbon.png" width="500" valign="middle" alt="GDNewsBot logo">
